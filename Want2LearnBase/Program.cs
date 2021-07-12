@@ -10,7 +10,7 @@ namespace Want2LearnBase
     {
         static void Main(string[] args)
         {
-            string test;
+            
         }
     }
 }

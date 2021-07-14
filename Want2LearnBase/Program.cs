@@ -10,7 +10,7 @@ namespace Want2LearnBase
     {
         static void Main(string[] args)
         {
-            
+           
         }
         public static int[] RandomArray(int number, Random rnd)
         {
@@ -87,6 +87,12 @@ namespace Want2LearnBase
             Temp = first;
             first = second;
             second = Temp;
+        }
+        public static string GetAddress(string city, string street, string houseNumber, string flatNumber)
+        {
+            string FullAdress;
+            FullAdress = String.Format("г. {0}, ул. {1}, д. {2}, кв. {3}", city, street, houseNumber, flatNumber);
+            return FullAdress;
         }
     }
 }

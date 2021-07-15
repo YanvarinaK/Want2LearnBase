@@ -12,6 +12,7 @@ namespace Want2LearnBase
         {
            
         }
+
         public static int[] RandomArray(int number, Random rnd)
         {
             int[] Array = new int[number];
@@ -21,6 +22,7 @@ namespace Want2LearnBase
             }
                 return Array;
         }
+
         public static void PrintArray(int[] Array)
         {
             for (int i = 0; i < Array.Length; i++)
@@ -29,6 +31,7 @@ namespace Want2LearnBase
             }
             Console.WriteLine();
         }
+
         public static void BubbleSort(int[] Array)
         {
             int Temp;
@@ -46,6 +49,7 @@ namespace Want2LearnBase
             }
            
         }
+
         public static void Swap(ref string line1, ref string line2)
         {
             string Temp;
@@ -53,6 +57,7 @@ namespace Want2LearnBase
             line1 = line2;
             line2 = Temp;
         }
+
         public static void Swap(ref int first, ref int second)
         {
             int Temp;
@@ -60,6 +65,7 @@ namespace Want2LearnBase
             first = second;
             second = Temp;
         }
+
         public static void Swap(ref double first, ref double second)
         {
             double Temp;
@@ -67,6 +73,7 @@ namespace Want2LearnBase
             first = second;
             second = Temp;
         }
+
         public static void Swap(ref decimal first, ref decimal second)
         {
             decimal Temp;
@@ -74,6 +81,7 @@ namespace Want2LearnBase
             first = second;
             second = Temp;
         }
+
         public static void Swap(ref byte first, ref byte second)
         {
             byte Temp;
@@ -81,6 +89,7 @@ namespace Want2LearnBase
             first = second;
             second = Temp;
         }
+
         public static void Swap(ref float first, ref float second)
         {
             float Temp;
@@ -88,12 +97,14 @@ namespace Want2LearnBase
             first = second;
             second = Temp;
         }
+
         public static string GetAddress(string city, string street, string houseNumber, string flatNumber)
         {
             string FullAdress;
             FullAdress = String.Format("г. {0}, ул. {1}, д. {2}, кв. {3}", city, street, houseNumber, flatNumber);
             return FullAdress;
         }
+
         private static void Sort(ref int firstNumber, ref int secondNumber)
         {
             if (firstNumber < secondNumber)
@@ -101,6 +112,7 @@ namespace Want2LearnBase
                 Swap(ref firstNumber, ref secondNumber);
             }
         }
+
         public static int FindNOD(int firstNumber, int secondNumber)
         {
             Sort(ref firstNumber, ref secondNumber);
@@ -119,6 +131,7 @@ namespace Want2LearnBase
             result = firstNumber;
             return result;
         }
+
         public static int GetCountContains(string line, char symbol)
         {
             int quantity = 0;
@@ -136,6 +149,7 @@ namespace Want2LearnBase
 
             return quantity;
         }
+
         public static int GetCountContains(string line, string word)
         {
             int quantity;

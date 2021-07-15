@@ -10,7 +10,14 @@ namespace Want2LearnBase
     {
         static void Main(string[] args)
         {
-           
+            string line = "";
+            char seporator = ' ';
+            string[] Result = MySplit(line, seporator);
+            for (int i = 0; i < Result.Length; i++)
+            {
+                Console.WriteLine(Result[i]);
+            }
+            Console.ReadKey();
         }
 
         public static int[] RandomArray(int number, Random rnd)
@@ -157,6 +164,66 @@ namespace Want2LearnBase
             quantity = (line.Length - newLine.Length) / word.Length;
             return quantity;
 
+        }
+
+        public static string StringToNormal(string line, char seporator)
+        {
+            line = line.Trim(seporator);
+            string DuplicateSep = new string(seporator, 2);
+            string sep = new string(seporator,1);
+            while (line.Contains(DuplicateSep))
+            {
+                line = line.Replace(DuplicateSep, sep);
+            }
+            return line;
+        }
+
+        public static string GetSubString(string line, int IndexStart, int IndexEnd)
+        {
+            string SubString = string.Empty;
+            for (int i = IndexStart; i <= IndexEnd; i++)
+            {
+                SubString = SubString + line[i];
+
+            }
+            return SubString;
+        }
+
+        public static int[] GetIndexSeparator(string Line, char Seporator)
+        {
+           
+            int count = GetCountContains(Line, Seporator);
+            int[] ArrayInd = new int[count];
+            for (int i = 0, j = 0; i < Line.Length; i++)
+            {
+                if (Line[i] == Seporator)
+                {
+                    ArrayInd[j] = i;
+                    j++;
+                }
+            }
+            return ArrayInd;
+        }
+
+        public static string[] MySplit(string line, char seporator)
+        {
+            if (line == null || line == String.Empty)
+            {
+                return null;
+            }
+
+            line = StringToNormal(line, seporator);
+            int[] IndexesSeporators = GetIndexSeparator(line, seporator);
+            int countWords = IndexesSeporators.Length + 1;
+            string[] resultArray = new string[countWords];
+
+            resultArray[0] = GetSubString(line, 0, IndexesSeporators[0] - 1);
+            resultArray[resultArray.Length - 1] = GetSubString(line, IndexesSeporators[IndexesSeporators.Length - 1] +1, line.Length - 1);
+            for (int i = 0, j = 1; i < IndexesSeporators.Length - 1; i++, j++)
+            {
+                resultArray[j] = GetSubString(line, IndexesSeporators[i] + 1, IndexesSeporators[i + 1]);
+            }
+            return resultArray;
         }
     }
 }

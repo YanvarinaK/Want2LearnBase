@@ -10,7 +10,7 @@ namespace Want2LearnBase
     {
         static void Main(string[] args)
         {
-            
+           
         }
         public static int[] RandomArray(int number, Random rnd)
         {
@@ -135,6 +135,14 @@ namespace Want2LearnBase
             }
 
             return quantity;
+        }
+        public static int GetCountContains(string line, string word)
+        {
+            int quantity;
+            string newLine = line.Replace(word, "");
+            quantity = (line.Length - newLine.Length) / word.Length;
+            return quantity;
+
         }
     }
 }

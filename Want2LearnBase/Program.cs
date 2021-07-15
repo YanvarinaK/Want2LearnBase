@@ -10,12 +10,7 @@ namespace Want2LearnBase
     {
         static void Main(string[] args)
         {
-            int first = 96;
-            int second = 140;
-            int NOD = FindNOD(first, second);
-            Console.WriteLine(NOD);
-         
-            Console.ReadKey();
+            
         }
         public static int[] RandomArray(int number, Random rnd)
         {
@@ -94,7 +89,6 @@ namespace Want2LearnBase
             second = Temp;
         }
         public static string GetAddress(string city, string street, string houseNumber, string flatNumber)
-
         {
             string FullAdress;
             FullAdress = String.Format("г. {0}, ул. {1}, д. {2}, кв. {3}", city, street, houseNumber, flatNumber);
@@ -124,6 +118,23 @@ namespace Want2LearnBase
             while (ost != 0);
             result = firstNumber;
             return result;
+        }
+        public static int GetCountContains(string line, char symbol)
+        {
+            int quantity = 0;
+            if (line == null)
+            {
+                return 0;
+            }
+            for (int i = 0; i < line.Length; i++)
+            {
+                if (line[i] == symbol)
+                {
+                    quantity++;
+                }
+            }
+
+            return quantity;
         }
     }
 }

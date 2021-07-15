@@ -10,8 +10,7 @@ namespace Want2LearnBase
     {
         static void Main(string[] args)
         {
-            Console.WriteLine(GetCountContains("Артем пидр пидрило пидрилка", "пидр"));
-            Console.ReadKey();
+           
         }
         public static int[] RandomArray(int number, Random rnd)
         {

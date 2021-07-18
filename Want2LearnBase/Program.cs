@@ -10,14 +10,8 @@ namespace Want2LearnBase
     {
         static void Main(string[] args)
         {
-            string line = "";
-            char seporator = ' ';
-            string[] Result = MySplit(line, seporator);
-            for (int i = 0; i < Result.Length; i++)
-            {
-                Console.WriteLine(Result[i]);
-            }
-            Console.ReadKey();
+            
+          
         }
 
         public static int[] RandomArray(int number, Random rnd)
@@ -224,6 +218,22 @@ namespace Want2LearnBase
                 resultArray[j] = GetSubString(line, IndexesSeporators[i] + 1, IndexesSeporators[i + 1]);
             }
             return resultArray;
+        }
+
+        public static char[] GetEngAlphabet()
+        {
+            int size = 52;
+            int j = 0;
+            char[] Alphabet = new char[size];
+            for (char i = 'a'; i <= 'z'; i++, j++)
+            {
+                Alphabet[j] = i;
+            }
+            for (char i = 'A'; i <= 'Z'; i++, j++)
+            {
+                Alphabet[j] = i;
+            }
+            return Alphabet;
         }
     }
 }

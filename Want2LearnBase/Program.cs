@@ -11,7 +11,6 @@ namespace Want2LearnBase
         static void Main(string[] args)
         {
             
-          
         }
 
         public static int[] RandomArray(int number, Random rnd)
@@ -218,6 +217,36 @@ namespace Want2LearnBase
                 resultArray[j] = GetSubString(line, IndexesSeporators[i] + 1, IndexesSeporators[i + 1]);
             }
             return resultArray;
+        }
+
+        public static char[] GetRusAlphabet()
+        {
+            int size = 66;
+            int indexEndSmall = 32;
+            int indexOfyo = 6;
+            int indexBeginLarge = 33;
+            int indexOfYO = 39;
+
+            char[] Alphavit = new char[size];
+            for (int i = 0, j = (int)'а'; i <= indexEndSmall; i++, j++)
+            {
+                if (i == indexOfyo)
+                {
+                    Alphavit[i] = 'ё';
+                    i++;
+                }
+                Alphavit[i] = (char)(j);
+            }
+            for (int i = indexBeginLarge, j = (int)'А'; i <= Alphavit.Length - 1; i++, j++)
+            {
+                if (i == indexOfYO)
+                {
+                    Alphavit[i] = 'Ё';
+                    i++;
+                }
+                Alphavit[i] = (char)(j);
+            }
+            return Alphavit;
         }
 
         public static char[] GetEngAlphabet()

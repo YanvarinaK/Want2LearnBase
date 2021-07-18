@@ -248,5 +248,21 @@ namespace Want2LearnBase
             }
             return Alphavit;
         }
+
+        public static char[] GetEngAlphabet()
+        {
+            int size = 52;
+            int j = 0;
+            char[] Alphabet = new char[size];
+            for (char i = 'a'; i <= 'z'; i++, j++)
+            {
+                Alphabet[j] = i;
+            }
+            for (char i = 'A'; i <= 'Z'; i++, j++)
+            {
+                Alphabet[j] = i;
+            }
+            return Alphabet;
+        }
     }
 }

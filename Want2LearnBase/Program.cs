@@ -10,7 +10,7 @@ namespace Want2LearnBase
     {
         static void Main(string[] args)
         {
-            
+           
         }
 
         public static int[] RandomArray(int number, Random rnd)
@@ -247,6 +247,43 @@ namespace Want2LearnBase
                 Alphavit[i] = (char)(j);
             }
             return Alphavit;
+        }
+
+        public static void ToLowerCase(ref string WordFirst, ref string WordSecond)
+        {
+            WordFirst = WordFirst.ToLower();
+            WordSecond = WordSecond.ToLower();
+        }
+
+        private static void SortCharArray(char[] Array)
+        {
+            char Temp;
+            for (int i = 0; i < Array.Length; i++)
+            {
+                for (int j = i + 1; j < Array.Length; j++)
+                {
+                    if (Array[i] > Array[j])
+                    {
+                        Temp = Array[i];
+                        Array[i] = Array[j];
+                        Array[j] = Temp;
+                    }
+                }
+            }
+        }
+
+        public static bool FindAnagram(string wordFirst, string wordSecond)
+        {
+            bool IsAnAnagram;
+            ToLowerCase(ref wordFirst, ref wordSecond);
+            char[] WordFirst = wordFirst.ToCharArray();
+            char[] WordSecond = wordSecond.ToCharArray();
+            SortCharArray(WordFirst);
+            SortCharArray(WordSecond);
+            string FirstWord = new string(WordFirst);
+            string SecondWord = new string(WordSecond);
+            IsAnAnagram = String.Compare(FirstWord, SecondWord) == 0 ? true : false;
+            return IsAnAnagram;
         }
     }
 }

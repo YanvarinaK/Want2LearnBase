@@ -272,7 +272,7 @@ namespace Want2LearnBase
             }
         }
 
-        public static bool ISAnAnagram(string wordFirst, string wordSecond)
+        public static bool IsAnagram(string wordFirst, string wordSecond)
         {
             bool IsAnagram;
             ToLowerCase(ref wordFirst, ref wordSecond);

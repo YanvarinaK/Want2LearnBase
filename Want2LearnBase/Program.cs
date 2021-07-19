@@ -23,7 +23,7 @@ namespace Want2LearnBase
                 return Array;
         }
 
-        public static void PrintArray(int[] Array)
+        public static void PrintArrayFor(int[] Array)
         {
             for (int i = 0; i < Array.Length; i++)
             {
@@ -320,6 +320,36 @@ namespace Want2LearnBase
             string ReverseWord = ReverseString(word);
             bool Palindrome = word == ReverseWord;
             return Palindrome;
+        }
+
+        public static void PrintArrayForEach(int[] Array)
+        {
+            
+            foreach (int i in Array)
+            {
+                Console.WriteLine(i);
+            }
+        }
+
+        public static void PrintArrayWhile(int[] Array)
+        {
+            int i = 0;
+            while (i < Array.Length)
+            {
+                Console.WriteLine(Array[i]);
+                i++;
+            }
+        }
+
+        public static void PrintArrayDoWhile(int[] Array)
+        {
+            int i = 0;
+            do
+            {
+                Console.WriteLine(Array[i]);
+                i++;
+            }
+            while (i < Array.Length);
         }
 
     }

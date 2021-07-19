@@ -25,6 +25,10 @@ namespace Want2LearnBase
 
         public static void PrintArrayFor(int[] Array)
         {
+            if (Array == null)
+            {
+                return;
+            }
             for (int i = 0; i < Array.Length; i++)
             {
                 Console.Write($"{Array[i]} ");
@@ -324,7 +328,10 @@ namespace Want2LearnBase
 
         public static void PrintArrayForEach(int[] Array)
         {
-            
+            if (Array == null)
+            {
+                return;
+            }
             foreach (int i in Array)
             {
                 Console.WriteLine(i);
@@ -333,6 +340,10 @@ namespace Want2LearnBase
 
         public static void PrintArrayWhile(int[] Array)
         {
+            if (Array == null)
+            {
+                return;
+            }
             int i = 0;
             while (i < Array.Length)
             {
@@ -343,6 +354,10 @@ namespace Want2LearnBase
 
         public static void PrintArrayDoWhile(int[] Array)
         {
+            if ((Array == null) || (Array.Length == 0))
+            {
+                return;
+            }
             int i = 0;
             do
             {

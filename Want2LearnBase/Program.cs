@@ -10,7 +10,7 @@ namespace Want2LearnBase
     {
         static void Main(string[] args)
         {
-           
+            
         }
 
         public static int[] RandomArray(int number, Random rnd)
@@ -301,5 +301,26 @@ namespace Want2LearnBase
             }
             return Alphabet;
         }
+
+        private static string ReverseString(string word)
+        {
+            char[] Word = word.ToCharArray();
+            Array.Reverse(Word);
+            string RevWord = new string(Word);
+            return RevWord;
+        }
+
+        public static bool IsPalindrome(string word)
+        {
+            if (word == null || word == String.Empty)
+            {
+                return false;
+            }
+            word = word.ToLower();
+            string ReverseWord = ReverseString(word);
+            bool Palindrome = word == ReverseWord;
+            return Palindrome;
+        }
+
     }
 }

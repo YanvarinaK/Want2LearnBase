@@ -272,9 +272,9 @@ namespace Want2LearnBase
             }
         }
 
-        public static bool FindAnagram(string wordFirst, string wordSecond)
+        public static bool ISAnAnagram(string wordFirst, string wordSecond)
         {
-            bool IsAnAnagram;
+            bool IsAnagram;
             ToLowerCase(ref wordFirst, ref wordSecond);
             char[] WordFirst = wordFirst.ToCharArray();
             char[] WordSecond = wordSecond.ToCharArray();
@@ -282,8 +282,8 @@ namespace Want2LearnBase
             SortCharArray(WordSecond);
             string FirstWord = new string(WordFirst);
             string SecondWord = new string(WordSecond);
-            IsAnAnagram = String.Compare(FirstWord, SecondWord) == 0 ? true : false;
-            return IsAnAnagram;
+            IsAnagram = String.Compare(FirstWord, SecondWord) == 0 ? true : false;
+            return IsAnagram;
         }
 
         public static char[] GetEngAlphabet()

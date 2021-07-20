@@ -11,11 +11,23 @@ namespace Want2LearnBase
         Man,
         Woman
     }
+
+    enum CycleType
+    {
+        For,
+        Foreach,
+        While,
+        DoWhile
+    }
     class Program
     {
         static void Main(string[] args)
         {
-           
+            Random rnd = new Random();
+            int[] Array = RandomArray(8, rnd);
+            CycleType Type = CycleType.DoWhile;
+            Print(Array, Type);
+            Console.ReadKey();
         }
 
         public static int[] RandomArray(int number, Random rnd)
@@ -563,6 +575,30 @@ namespace Want2LearnBase
                 ResultWelcome = String.Format("Уважаемая {0}, добро пожаловать!", fullname);
             }
             return ResultWelcome;
+        }
+
+        public static void Print(int[] array, CycleType cycleType)
+        {
+            if (array == null)
+            {
+                return;
+            }
+            switch (cycleType)
+            {
+                case CycleType.For:
+                    PrintArrayFor(array);
+                    break;
+                case CycleType.Foreach:
+                    PrintArrayForEach(array);
+                    break;
+                case CycleType.While:
+                    PrintArrayWhile(array);
+                    break;
+                case CycleType.DoWhile:
+                    PrintArrayDoWhile(array);
+                    break;
+               
+            }
         }
     }
 }

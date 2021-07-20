@@ -6,18 +6,16 @@ using System.Threading.Tasks;
 
 namespace Want2LearnBase
 {
+    enum Gender
+    {
+        Man,
+        Woman
+    }
     class Program
     {
         static void Main(string[] args)
         {
-            int[] a = new int[] { 0, 1, 2, 1, 1 };
-            // int[] b = new int[] { 2, 2, 2, 2, 3, 4 };
-            int[] c = RemoveByValue(a, 0 );
-            foreach (var item in c)
-            {
-                Console.WriteLine(item);
-            }
-            Console.ReadKey();
+           
         }
 
         public static int[] RandomArray(int number, Random rnd)
@@ -551,6 +549,20 @@ namespace Want2LearnBase
                 i++;
             }
             return NewArray;
+        }
+
+        public static string Welcome(string fullname, Gender gender)
+        {
+            string ResultWelcome = String.Empty;
+            if (gender == Gender.Man)
+            {
+                ResultWelcome = String.Format("Уважаемый {0}, добро пожаловать!", fullname);
+            }
+            else
+            {
+                ResultWelcome = String.Format("Уважаемая {0}, добро пожаловать!", fullname);
+            }
+            return ResultWelcome;
         }
     }
 }

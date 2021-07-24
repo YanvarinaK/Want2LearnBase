@@ -23,11 +23,7 @@ namespace Want2LearnBase
     {
         static void Main(string[] args)
         {
-            Random rnd = new Random();
-            int[] Array = RandomArray(8, rnd);
-            CycleType Type = CycleType.DoWhile;
-            Print(Array, Type);
-            Console.ReadKey();
+           
         }
 
         public static int[] RandomArray(int number, Random rnd)

@@ -597,7 +597,7 @@ namespace Want2LearnBase
             }
         }
                 
-        public static int[,] VvodMatrix(int rows, int cols)
+        public static int[,] InputMatrixFromConsol(int rows, int cols)
         {
             int[,] matrix = new int[rows, cols];
             for (int i = 0; i < rows; i++)

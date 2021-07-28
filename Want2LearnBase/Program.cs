@@ -27,32 +27,7 @@ namespace Want2LearnBase
 
        
 
-        private static void Sort(ref int firstNumber, ref int secondNumber)
-        {
-            if (firstNumber < secondNumber)
-            {
-                Swap(ref firstNumber, ref secondNumber);
-            }
-        }
 
-        public static int FindNOD(int firstNumber, int secondNumber)
-        {
-            Sort(ref firstNumber, ref secondNumber);
-           
-            int result;
-            int ost;
-            do
-            {
-                if (secondNumber == 0)
-                    break;
-                ost = firstNumber % secondNumber;
-                firstNumber = secondNumber;
-                secondNumber = ost;
-            }
-            while (ost != 0);
-            result = firstNumber;
-            return result;
-        }
 
       
       

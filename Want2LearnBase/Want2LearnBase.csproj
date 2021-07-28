@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="AlphabetService.cs" />
     <Compile Include="ArrayService.cs" />
+    <Compile Include="MathService.cs" />
     <Compile Include="MatrixService.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AlphabetService.cs" />
     <Compile Include="ArrayService.cs" />
     <Compile Include="MatrixService.cs" />
     <Compile Include="Program.cs" />

@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace Want2LearnBase
 {
-   public static class StringService
+   public enum Gender
+    {
+        Man,
+        Woman
+    }
+    public static class StringService
     {
         public static string GetAddress(string city, string street, string houseNumber, string flatNumber)
         {
@@ -157,6 +162,20 @@ namespace Want2LearnBase
             string ReverseWord = ReverseString(word);
             bool Palindrome = word == ReverseWord;
             return Palindrome;
+        }
+
+        public static string Welcome(string fullname, Gender gender)
+        {
+            string ResultWelcome = String.Empty;
+            if (gender == Gender.Man)
+            {
+                ResultWelcome = String.Format("Уважаемый {0}, добро пожаловать!", fullname);
+            }
+            else
+            {
+                ResultWelcome = String.Format("Уважаемая {0}, добро пожаловать!", fullname);
+            }
+            return ResultWelcome;
         }
     }
 }

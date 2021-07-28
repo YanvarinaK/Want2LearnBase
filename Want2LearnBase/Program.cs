@@ -6,11 +6,7 @@ using System.Threading.Tasks;
 
 namespace Want2LearnBase
 {
-    enum Gender
-    {
-        Man,
-        Woman
-    }
+   
 
   
     class Program
@@ -36,19 +32,7 @@ namespace Want2LearnBase
 
       
 
-        public static string Welcome(string fullname, Gender gender)
-        {
-            string ResultWelcome = String.Empty;
-            if (gender == Gender.Man)
-            {
-                ResultWelcome = String.Format("Уважаемый {0}, добро пожаловать!", fullname);
-            }
-            else
-            {
-                ResultWelcome = String.Format("Уважаемая {0}, добро пожаловать!", fullname);
-            }
-            return ResultWelcome;
-        }
+       
 
         
                 

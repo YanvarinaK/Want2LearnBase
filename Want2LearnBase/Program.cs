@@ -15,34 +15,7 @@ namespace Want2LearnBase
         {
            
         }
-
-      
-
-       
-
-
-       
-
-
-
-      
-      
-
-      
-
-      
-
-       
-
-        
-                
-       
-
-       
-
-       
-
-
+              
     }
 }
 

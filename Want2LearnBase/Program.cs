@@ -23,7 +23,7 @@ namespace Want2LearnBase
     {
         static void Main(string[] args)
         {
-           
+            
         }
 
         public static int[] RandomArray(int number, Random rnd)
@@ -990,6 +990,56 @@ namespace Want2LearnBase
             }
             string RandomString = new string(randomArray);
             return RandomString;
+        }
+
+        public static void QSort(int[] array)
+        {
+            QSort(array, 0, array.Length - 1);
+        }
+
+        public static void QSort(int[] array, int left, int right)
+        {
+            if (left >= right)
+            {
+                return;
+            }
+            int pivot = left + (right - left) / 2;
+            Sorting(array, left, right, pivot);
+            QSort(array, left, pivot);
+            QSort(array, pivot + 1, right);
+            
+        }
+
+        public static void Sorting(int[] array, int left, int right, int pivot)
+        {
+            while (left < right)
+            {
+                if (array[left] < array[pivot])
+                {
+                    if (left < pivot)
+                    {
+                        left++;
+                    }
+                }
+                else
+                {
+                    if (array[right] > array[pivot])
+                    {
+                        if (right > pivot)
+                        {
+                            right--;
+                        }
+                    }
+                    else
+                    {
+                        Swap(ref array[left], ref array[right]);
+                        left++;
+                        right--;
+                    }
+                }
+                
+            }
+            
         }
 
 
